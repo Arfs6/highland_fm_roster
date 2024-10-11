@@ -3,11 +3,11 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "roster"
+name = "highland_fm_roster"
 dynamic = ["version"]
 description = 'A roster for Highland FM'
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
@@ -36,6 +36,7 @@ path = "src/roster/__about__.py"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
+  "django",
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
