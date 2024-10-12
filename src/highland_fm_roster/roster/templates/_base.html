@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- roster/base.html -->
+{% load static %}
+<html lang="en">
+
+<head>
+	{% include "roster/head.html" %}
+	{% block title %}{% endblock %}
+</head>
+
+<body id="#body" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+	<div class="root">
+		<header>
+			{% include "roster/header.html" %}
+		</header>
+		<main>
+
+			<div class="main-content" id="main-content">
+				{% block content %}{% endblock %}
+			</div>
+
+		</main>
+
+		<footer class="page-footer">
+			{% include "roster/footer.html" %}
+		</footer>
+	</div>
+
+</body>
+
+</html>
