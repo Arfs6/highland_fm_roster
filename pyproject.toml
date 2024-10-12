@@ -30,7 +30,7 @@ Issues = "https://github.com/arfs6/highland_fm_roster/issues"
 Source = "https://github.com/arfs6/highland_fm_roster"
 
 [tool.hatch.version]
-path = "src/roster/__about__.py"
+path = "src/highland_fm_roster/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -58,19 +58,19 @@ dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/roster tests}"
+check = "mypy --install-types --non-interactive {args:src/highland_fm_roster tests}"
 
 [tool.coverage.run]
-source_pkgs = ["roster", "tests"]
+source_pkgs = ["highland_fm_roster", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/roster/__about__.py",
+  "src/highland_fm_roster/__about__.py",
 ]
 
 [tool.coverage.paths]
-roster = ["src/roster", "*/roster/src/roster"]
-tests = ["tests", "*/roster/tests"]
+highland_fm_roster = ["src/highland_fm_roster", "*/highland_fm_roster/src/highland_fm_roster"]
+tests = ["tests", "*/highland_fm_roster/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
