@@ -1,0 +1,19 @@
+{% extends baseTemplate %}
+
+{% block title %}
+<title>Staffs List | Highland FM Roster</title>
+{% endblock %}
+
+{% block content %}
+<h1>Staffs List</h1>
+
+<a href="{% url 'roster:newStaff' %}">Add New Staff</a>
+
+<div class="orange divider"></div>
+
+<ul>
+{% for staff in staffs %}
+<li>{{ staff }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

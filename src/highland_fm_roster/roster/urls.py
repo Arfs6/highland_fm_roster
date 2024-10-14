@@ -8,4 +8,6 @@ app_name = 'roster'
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='roster/home.html'), name='home'),
+    path('staffs/', views.StaffListView.as_view(), name='staff_list'),
+    path('staffs/new/', TemplateView.as_view(template_name='roster/home.html'), name='newStaff'),
 ]
