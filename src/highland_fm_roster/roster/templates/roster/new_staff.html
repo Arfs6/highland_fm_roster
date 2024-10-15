@@ -2,9 +2,14 @@
 
 {% block title %}
 <title>New Staff | Highland FM Roster</title>
-{% endfor %}
+{% endblock %}
 
 {% block content %}
 <h1>New Staff</h1>
 
-{% endfor %}
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Create">
+</form>
+{% endblock %}
