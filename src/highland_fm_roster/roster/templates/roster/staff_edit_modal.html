@@ -1,0 +1,21 @@
+<div id="modal-staff-{{ staff.id }}-edit" class="modal">
+	<div class="modal-content">
+		<h4>Edit Staff</h4>
+		<form
+				id="staff-{{ staff.id }}-edit-form"
+				hx-put="{% url 'roster:staffActions' staff.id %}"
+				>
+				{{ csrf_toekn }}
+				{{ form.as_p }}
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button
+				form="staff-{{ staff.id }}-edit-form"
+				type="submit"
+				class="green-text modal-close waves-effect filled"
+				aria-label="Done">
+			<i class="material-symbols-outlined">done</i>
+		</button>
+	</div>
+</div>

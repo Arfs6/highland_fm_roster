@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <!-- roster/base.html -->
-{% load static %}
 <html lang="en">
 
-<head>
-	{% include "roster/head.html" %}
-	{% block title %}{% endblock %}
-</head>
+	<head>
+		{% include "roster/head.html" %}
+		{% block title %}{% endblock %}
+	</head>
 
-<body id="#body" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-	<div class="container">
-		<header>
-			{% include "roster/header.html" %}
-		</header>
-		<main>
+	<body id="#body" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+		<div class="container">
+			<header>
+				{% include "roster/header.html" %}
+			</header>
+			<main>
 
-			<div class="main-content" id="main-content">
-				<div class="container">
-					{% block content %}{% endblock %}
+				<div class="main-content" id="main-content">
+					<div class="container">
+						{% block content %}{% endblock %}
+					</div>
 				</div>
-			</div>
 
-		</main>
+			</main>
 
-		<footer class="page-footer">
-			{% include "roster/footer.html" %}
-		</footer>
-	</div>
 
-	<!-- Compiled and minified JavaScript -->
-	<script
-		src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.1.1/dist/js/materialize.min.js"></script>
-</body>
+			<footer class="page-footer">
+				{% include "roster/footer.html" %}
+			</footer>
+
+			<div id="modal-container" class="container"></div>
+		</div>
+
+		<!-- Compiled and minified JavaScript -->
+		<script
+				src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.1.1/dist/js/materialize.min.js"></script>
+	</body>
 
 </html>

@@ -1,0 +1,18 @@
+<li
+		id="staff-{{ staff.id }}"
+		hx-on::after-swap="M.Dropdown.init(this.querySelectorAll('.dropdown-trigger'));console.log(this)"
+		>
+		{{ staff }}
+		<button
+				type="button"
+				class="outlined waves-effect waves-dark dropdown-trigger"
+				data-target="dropdown-staff-{{ staff.id }}"
+				aria-label="More options"
+				>
+				<i class="material-symbols-outlined">more_vert</i>
+		</button>
+</li>
+<ul id="dropdown-staff-{{ staff.id }}" class="dropdown-content">
+	<li><a hx-get="{% url 'roster:staffActions' staff.id %}" hx-swap="beforeend" hx-target="#modal-container">Edit</a></li>
+	<li><a class="red-text waves-effect" hx-delete="{% url 'roster:staffActions' staff.id %}" hx-confirm="Are you sure you wish to delete {{ staff }}?">Delete</a></li>
+</ul>

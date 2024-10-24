@@ -9,11 +9,11 @@
 
 <a href="{% url 'roster:newStaff' %}">Add New Staff</a>
 
-<div class="orange divider"></div>
-
-<ul>
-{% for staff in staffs %}
-<li>{{ staff }}</li>
-{% endfor %}
-</ul>
+<div class="section">
+	<ul>
+		{% for staff in staffs %}
+		{% include 'roster/staff_list_item.html' with staff=staff %}
+		{% endfor %}
+	</ul>
+</div>
 {% endblock %}
