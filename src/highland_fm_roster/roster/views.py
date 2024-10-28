@@ -1,7 +1,8 @@
+from django.http import HttpRequest as HttpRequestBase
+from django.http import HttpResponse, QueryDict
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.views import View
 from django.views.generic import ListView
-from django.http import QueryDict, HttpResponse, HttpRequest as HttpRequestBase
 from django_htmx.middleware import HtmxDetails
 
 from .forms import StaffForm

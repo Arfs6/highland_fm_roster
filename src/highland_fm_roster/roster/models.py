@@ -1,6 +1,6 @@
 """Models for the roster app."""
-from django.db import models
 from django.core.validators import MinValueValidator
+from django.db import models
 
 
 class Staff(models.Model):
